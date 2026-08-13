@@ -504,117 +504,6 @@
     z-index:10;
   }
 
-  /* ---------- PAYMENT CHOICE MODAL ---------- */
-  .modal-overlay{
-    position:fixed;inset:0;
-    background:rgba(16,20,43,0.55);
-    display:flex;align-items:center;justify-content:center;
-    padding:20px;
-    z-index:1000;
-    opacity:0;
-    pointer-events:none;
-    transition:opacity .25s ease;
-  }
-  .modal-overlay.show{opacity:1;pointer-events:auto;}
-  .modal-card{
-    background:var(--white);
-    border-radius:26px;
-    padding:38px 34px;
-    max-width:520px;
-    width:100%;
-    position:relative;
-    box-shadow:0 40px 80px -20px rgba(16,20,43,0.5);
-    transform:translateY(18px) scale(0.97);
-    transition:transform .25s cubic-bezier(.22,1,.36,1);
-  }
-  .modal-overlay.show .modal-card{transform:translateY(0) scale(1);}
-  .modal-card h3{
-    font-size:26px;
-    margin:12px 0 8px;
-  }
-  .modal-sub{
-    font-size:14.5px;
-    color:var(--ink-soft);
-    margin-bottom:24px;
-  }
-  .modal-close{
-    position:absolute;top:18px;right:18px;
-    width:32px;height:32px;
-    border-radius:50%;
-    border:none;
-    background:var(--bg);
-    color:var(--ink);
-    font-size:14px;
-    cursor:pointer;
-    display:flex;align-items:center;justify-content:center;
-    transition:background .15s ease;
-  }
-  .modal-close:hover{background:var(--line);}
-  .pay-options{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-  }
-  .pay-option{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    text-align:left;
-    background:var(--bg);
-    border:2px solid var(--line);
-    border-radius:18px;
-    padding:20px 22px;
-    cursor:pointer;
-    font-family:'Plus Jakarta Sans', sans-serif;
-    transition:border-color .15s ease, transform .15s ease, box-shadow .15s ease;
-    position:relative;
-  }
-  .pay-option:hover{
-    border-color:var(--blue);
-    transform:translateY(-2px);
-    box-shadow:0 12px 24px -14px rgba(46,92,232,0.4);
-  }
-  .po-tag{
-    font-family:'Fredoka',sans-serif;
-    font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
-    color:var(--orange-deep);
-    background:rgba(255,138,61,0.14);
-    padding:4px 10px;
-    border-radius:999px;
-    margin-bottom:10px;
-  }
-  .po-tag.alt{
-    color:var(--blue-deep);
-    background:rgba(46,92,232,0.1);
-  }
-  .po-title{
-    font-family:'Fredoka',sans-serif;
-    font-weight:600;
-    font-size:19px;
-    color:var(--ink);
-  }
-  .po-price{
-    font-family:'Fredoka',sans-serif;
-    font-weight:600;
-    font-size:24px;
-    color:var(--ink);
-    margin-top:4px;
-  }
-  .po-price small{
-    font-family:'Plus Jakarta Sans', sans-serif;
-    font-size:13px;
-    font-weight:500;
-    color:var(--ink-soft);
-  }
-  .po-desc{
-    font-size:13.5px;
-    color:var(--ink-soft);
-    margin-top:8px;
-  }
-  @media(max-width:480px){
-    .modal-card{padding:28px 22px;}
-  }
-
   /* scroll reveal */
   .reveal{
     opacity:0;
@@ -653,7 +542,7 @@
     <div>
       <p class="eyebrow">✦ 1:1 personal session</p>
       <h1>one session.<br>your whole <span class="hl">substack</span>,<br><span class="hl2">sorted</span>.</h1>
-      <p class="sub">a full audit, a real strategy, and a plan you'll actually follow, built with you in one focused session. not another course. not another PDF you'll never open.</p>
+      <p class="sub">a full audit, a real strategy, and a plan you'll actually follow, built with you in one focused hour. not another course. not another PDF you'll never open.</p>
       <button type="button" class="cta-btn" id="heroCta">grab your 1:1 pass →</button>
       <p class="cta-note">limited sessions each month, so it stays <strong>actually personal</strong>.</p>
     </div>
@@ -666,6 +555,7 @@
       </div>
       <div class="ticket-divider"></div>
       <div class="ticket-body">
+        <div class="ticket-row"><span>duration</span><span>1 hour</span></div>
         <div class="ticket-row"><span>publication audit</span><span>included</span></div>
         <div class="ticket-row"><span>positioning</span><span>included</span></div>
         <div class="ticket-row"><span>growth strategy</span><span>included</span></div>
@@ -688,7 +578,7 @@
     <div class="section-head reveal">
       <p class="eyebrow">what's inside</p>
       <h2>six stops, one ticket</h2>
-      <p>this isn't a call where we chat about strategy in the abstract. we go through your actual publication, together, and fix what's actually in front of us.</p>
+      <p>this isn't a call where we chat about strategy in the abstract. in one hour, we go through your actual publication, together, and fix what's actually in front of us.</p>
     </div>
     <div class="rides-grid">
       <div class="ride-card reveal">
@@ -753,7 +643,7 @@
         <div class="save-badge">you save $485 🎉</div>
       </div>
 
-      <p class="plan-note">budget's tight right now? <strong>split it into 3 payments of $166</strong> at checkout, no extra cost, no awkward conversation needed. same session, same everything.</p>
+      <p class="plan-note">no hidden fees, no surprise add ons. what you see is what you pay, once.</p>
     </div>
   </section>
 
@@ -792,9 +682,9 @@
     <div class="final-cta reveal">
       <p class="eyebrow">✦ your pass is waiting</p>
       <h2>ready to sort your substack, for good?</h2>
-      <p style="font-size:16px;color:var(--ink-soft);margin-top:6px;">one session. six stops. a plan you'll actually use.</p>
-      <button type="button" class="cta-btn" id="finalCta">grab my 1:1 pass →</button>
-      <p class="cta-note">pick pay in full or pay weekly on the next step · secure checkout via lemon squeezy</p>
+      <p style="font-size:16px;color:var(--ink-soft);margin-top:6px;">one hour. six stops. a plan you'll actually use.</p>
+      <a href="https://wise.com/pay/r/vEDssyWJ9Q_S7To" class="cta-btn" id="finalCta" target="_blank" rel="noopener">grab my 1:1 pass →</a>
+      <p class="cta-note">secure payment via wise</p>
     </div>
   </section>
 
@@ -807,38 +697,12 @@
       <details class="terms-details">
         <summary>terms</summary>
         <div class="terms-panel">
-          pay in full and get your booking link right away. on the weekly plan, your booking link is sent once the 3rd payment clears. reschedule up to 24 hours ahead with one free reschedule included, and payment plans are non-refundable once the session is delivered.
+          your booking link is sent as soon as payment clears. reschedule up to 24 hours ahead with one free reschedule included. sessions are non-refundable once delivered.
         </div>
       </details>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.growthpark@gmail.com" target="_blank" rel="noopener">contact</a>
     </span>
   </footer>
-</div>
-
-<!-- PAYMENT CHOICE MODAL -->
-<div class="modal-overlay" id="payModal" aria-hidden="true">
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="payModalTitle">
-    <button type="button" class="modal-close" id="modalClose" aria-label="close">✕</button>
-    <p class="eyebrow">✦ pick your ticket</p>
-    <h3 id="payModalTitle">how do you want to pay?</h3>
-    <p class="modal-sub">both options unlock the exact same session, six stops, one written plan.</p>
-
-    <div class="pay-options">
-      <button type="button" class="pay-option" id="payFull">
-        <span class="po-tag">most popular</span>
-        <span class="po-title">pay in full</span>
-        <span class="po-price">$497 <small>one time</small></span>
-        <span class="po-desc">book your session right away, no waiting on future payments.</span>
-      </button>
-
-      <button type="button" class="pay-option" id="payWeekly">
-        <span class="po-tag alt">budget friendly</span>
-        <span class="po-title">pay weekly</span>
-        <span class="po-price">$166 <small>× 3 weeks</small></span>
-        <span class="po-desc">card's charged automatically each week. booking link goes out once the 3rd payment clears.</span>
-      </button>
-    </div>
-  </div>
 </div>
 
 <script>
@@ -899,51 +763,18 @@
     }
   }
 
-  // ---- payment choice modal ----
-  // REPLACE these two placeholder links with your real Lemon Squeezy checkout links
-  const PAY_IN_FULL_LINK = "REPLACE_WITH_ONE_TIME_PAYMENT_LINK";
-  const PAY_WEEKLY_LINK = "REPLACE_WITH_WEEKLY_PAYMENT_LINK";
-
-  const payModal = document.getElementById('payModal');
-  const finalCta = document.getElementById('finalCta');
-  const modalClose = document.getElementById('modalClose');
-
-  function openPayModal() {
-    payModal.classList.add('show');
-    payModal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-  function closePayModal() {
-    payModal.classList.remove('show');
-    payModal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  finalCta.addEventListener('click', (e) => {
+  document.getElementById('navCta').addEventListener('click', (e) => {
+    e.preventDefault();
     burstConfetti(e.clientX, e.clientY);
-    openPayModal();
+    document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
   document.getElementById('heroCta').addEventListener('click', (e) => {
+    e.preventDefault();
     burstConfetti(e.clientX, e.clientY);
-    openPayModal();
+    document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
-  document.getElementById('navCta').addEventListener('click', (e) => {
+  document.getElementById('finalCta').addEventListener('click', (e) => {
     burstConfetti(e.clientX, e.clientY);
-    openPayModal();
-  });
-  modalClose.addEventListener('click', closePayModal);
-  payModal.addEventListener('click', (e) => {
-    if (e.target === payModal) closePayModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && payModal.classList.contains('show')) closePayModal();
-  });
-
-  document.getElementById('payFull').addEventListener('click', () => {
-    window.location.href = PAY_IN_FULL_LINK;
-  });
-  document.getElementById('payWeekly').addEventListener('click', () => {
-    window.location.href = PAY_WEEKLY_LINK;
   });
 
   // playful speech bubble asides that pop up unexpectedly while scrolling
