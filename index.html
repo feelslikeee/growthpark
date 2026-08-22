@@ -250,6 +250,37 @@
   .section-head h2{font-size:clamp(28px,3.4vw,42px);margin-top:14px;}
   .section-head p{margin-top:14px;font-size:16.5px;color:var(--ink-soft);}
 
+  /* why this is different */
+  .diff-block{
+    background:var(--white);
+    border:2px solid var(--ink);
+    border-radius:28px;
+    padding:44px 42px;
+    position:relative;
+    z-index:1;
+  }
+  .diff-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:32px;
+  }
+  .diff-card{
+    background:var(--bg);
+    border-radius:18px;
+    padding:22px 20px;
+  }
+  .diff-num{
+    font-family:'Fredoka',sans-serif;
+    font-size:22px;
+    font-weight:600;
+    color:var(--orange);
+    display:block;
+    margin-bottom:10px;
+  }
+  .diff-card h3{font-size:17px;margin-bottom:8px;}
+  .diff-card p{font-size:14px;color:var(--ink-soft);}
+
   /* attractions grid */
   .rides-grid{
     display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
@@ -514,9 +545,10 @@
 
   @media(max-width:860px){
     .hero{grid-template-columns:1fr;gap:36px;}
-    .rides-grid, .for-row{grid-template-columns:1fr;}
+    .rides-grid, .for-row, .diff-grid{grid-template-columns:1fr;}
     .system{grid-template-columns:1fr;padding:36px 24px;}
     .stack-wrap{padding:36px 24px;}
+    .diff-block{padding:32px 24px;}
     footer{flex-direction:column;gap:10px;text-align:center;}
     .ticket{transform:none;}
     .bubble{display:none;}
@@ -542,7 +574,7 @@
     <div>
       <p class="eyebrow">✦ 1:1 personal session</p>
       <h1>one session.<br>your whole <span class="hl">substack</span>,<br><span class="hl2">sorted</span>.</h1>
-      <p class="sub">a full audit, a real strategy, and a plan you'll actually follow, built with you in one focused hour. not another course. not another PDF you'll never open.</p>
+      <p class="sub">a full audit, a real strategy, and a plan you'll actually follow, built with you in one focused hour. we don't chase vanity numbers here, we build a community that's actually yours, on and off the platform.</p>
       <button type="button" class="cta-btn" id="heroCta">grab your 1:1 pass →</button>
       <p class="cta-note">limited sessions each month, so it stays <strong>actually personal</strong>.</p>
     </div>
@@ -569,9 +601,35 @@
   <!-- MARQUEE -->
   <div class="marquee-wrap">
     <div class="marquee">
-      <span><span>no fluff</span><span>no lines</span><span>no cookie cutter advice</span><span>just your substack, sorted</span><span>one real session</span><span>no fluff</span><span>no lines</span><span>no cookie cutter advice</span><span>just your substack, sorted</span><span>one real session</span></span>
+      <span><span>no fluff</span><span>real people over vanity numbers</span><span>no cookie cutter advice</span><span>community that outlasts the algorithm</span><span>one real session</span><span>no fluff</span><span>real people over vanity numbers</span><span>no cookie cutter advice</span><span>community that outlasts the algorithm</span><span>one real session</span></span>
     </div>
   </div>
+
+  <!-- WHY THIS IS DIFFERENT -->
+  <section style="padding-bottom:20px;">
+    <div class="diff-block reveal">
+      <p class="eyebrow" style="background:rgba(255,138,61,0.14);color:var(--orange-deep);">✦ why this is different</p>
+      <h2 style="margin-top:14px;max-width:600px;">people over numbers, always</h2>
+      <p style="font-size:16px;color:var(--ink-soft);max-width:620px;margin-top:14px;">most growth advice is just chasing whatever an algorithm rewards this week. that's a shaky place to build anything. this session is built around something sturdier: real people who actually know you, not just a subscriber count. we spend real time on how to build that connection outside the platform too, so your community is still yours even if an app changes its rules overnight.</p>
+      <div class="diff-grid">
+        <div class="diff-card">
+          <span class="diff-num">01</span>
+          <h3>real people, not vanity numbers</h3>
+          <p>fifty people who actually open your posts and reply beat five thousand who scroll past. we build for the fifty.</p>
+        </div>
+        <div class="diff-card">
+          <span class="diff-num">02</span>
+          <h3>a life outside the algorithm</h3>
+          <p>we map out how to move your closest readers somewhere an algorithm can't touch, an email list, a group chat, a real gathering.</p>
+        </div>
+        <div class="diff-card">
+          <span class="diff-num">03</span>
+          <h3>community that outlasts the app</h3>
+          <p>platforms change their rules constantly. what you build with this session doesn't disappear when one of them does.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- WHAT'S INCLUDED -->
   <section>
@@ -585,37 +643,37 @@
         <span class="tag">stop 01</span>
         <h3>publication audit</h3>
         <p>a full walkthrough of what's working, what's quietly holding you back, and what's costing you subscribers without you realizing it.</p>
-        <p class="worth">worth $147 alone</p>
+        <p class="worth">worth $300 alone</p>
       </div>
       <div class="ride-card reveal">
         <span class="tag">stop 02</span>
         <h3>positioning</h3>
         <p>who you're for, what makes you different, and why someone should subscribe to you and not the ten other people writing about the same thing.</p>
-        <p class="worth">worth $147 alone</p>
+        <p class="worth">worth $300 alone</p>
       </div>
       <div class="ride-card reveal">
         <span class="tag">stop 03</span>
         <h3>growth strategy</h3>
-        <p>where your next subscribers are actually going to come from, mapped out so you're not guessing every week.</p>
-        <p class="worth">worth $197 alone</p>
+        <p>where your next people are actually going to come from, on the platform and off it, so your reach isn't just a number an algorithm decided to show today.</p>
+        <p class="worth">worth $400 alone</p>
       </div>
       <div class="ride-card reveal">
         <span class="tag">stop 04</span>
         <h3>monetization roadmap</h3>
         <p>pricing, tiers, and timing that fit where you are right now, not a copy paste of what worked for someone with 50k subscribers.</p>
-        <p class="worth">worth $197 alone</p>
+        <p class="worth">worth $400 alone</p>
       </div>
       <div class="ride-card reveal">
         <span class="tag">stop 05</span>
         <h3>personalized action plan</h3>
         <p>a written, ordered plan for the next 30 days, so you leave with next steps instead of just inspiration.</p>
-        <p class="worth">worth $147 alone</p>
+        <p class="worth">worth $300 alone</p>
       </div>
       <div class="ride-card reveal">
         <span class="tag">stop 06</span>
         <h3>consistency system</h3>
         <p>a real system to keep showing up, built so you're running on structure, not motivation you'll run out of by week three.</p>
-        <p class="worth">worth $147 alone</p>
+        <p class="worth">worth $300 alone</p>
       </div>
     </div>
   </section>
@@ -626,13 +684,13 @@
       <p class="eyebrow">the ticket price</p>
       <h2 style="margin-top:14px;">here's the fun part</h2>
       <div class="stack-list">
-        <div class="stack-item"><span>publication audit</span><span class="val">$147</span></div>
-        <div class="stack-item"><span>positioning</span><span class="val">$147</span></div>
-        <div class="stack-item"><span>growth strategy</span><span class="val">$197</span></div>
-        <div class="stack-item"><span>monetization roadmap</span><span class="val">$197</span></div>
-        <div class="stack-item"><span>personalized action plan</span><span class="val">$147</span></div>
-        <div class="stack-item"><span>consistency system</span><span class="val">$147</span></div>
-        <div class="stack-total"><span>if you bought all of it separately</span><span class="val">$982</span></div>
+        <div class="stack-item"><span>publication audit</span><span class="val">$300</span></div>
+        <div class="stack-item"><span>positioning</span><span class="val">$300</span></div>
+        <div class="stack-item"><span>growth strategy</span><span class="val">$400</span></div>
+        <div class="stack-item"><span>monetization roadmap</span><span class="val">$400</span></div>
+        <div class="stack-item"><span>personalized action plan</span><span class="val">$300</span></div>
+        <div class="stack-item"><span>consistency system</span><span class="val">$300</span></div>
+        <div class="stack-total"><span>if you bought all of it separately</span><span class="val">$2,000</span></div>
       </div>
 
       <div class="price-reveal">
@@ -640,7 +698,7 @@
           <p class="today-label">your ticket, today</p>
           <p class="big-price"><span>$</span><span id="priceCount">497</span></p>
         </div>
-        <div class="save-badge">you save $485 🎉</div>
+        <div class="save-badge">you save $1,503 🎉</div>
       </div>
 
       <p class="plan-note">no hidden fees, no surprise add ons. what you see is what you pay, once.</p>
@@ -659,6 +717,7 @@
         <div class="sys-row"><span class="num">→</span><span>a plan that runs even on your low energy weeks</span></div>
         <div class="sys-row"><span class="num">→</span><span>fewer decisions to make every time you sit down to write</span></div>
         <div class="sys-row"><span class="num">→</span><span>consistency built into your process, not your discipline</span></div>
+        <div class="sys-row"><span class="num">→</span><span>a community that's still there even if an algorithm update wrecks your reach overnight</span></div>
       </div>
     </div>
   </section>
@@ -671,9 +730,9 @@
     </div>
     <div class="for-row">
       <div class="for-card reveal"><b>you've got a substack that deserves better</b><p>the writing's there. the strategy behind it isn't, yet.</p></div>
-      <div class="for-card reveal"><b>you're ready to charge for it</b><p>but you're not sure your pricing or timing actually make sense.</p></div>
+      <div class="for-card reveal"><b>you want people, not just followers</b><p>you'd rather have a handful of readers who actually stick around than a big number that means nothing.</p></div>
       <div class="for-card reveal"><b>you're tired of generic advice</b><p>"be consistent" isn't a plan, and you already know that.</p></div>
-      <div class="for-card reveal"><b>you want this handled in one sitting</b><p>not a six week course. one focused session, one real plan.</p></div>
+      <div class="for-card reveal"><b>you want this handled in one sitting</b><p>not a six week course. one focused hour, one real plan.</p></div>
     </div>
   </section>
 
@@ -684,7 +743,7 @@
       <h2>ready to sort your substack, for good?</h2>
       <p style="font-size:16px;color:var(--ink-soft);margin-top:6px;">one hour. six stops. a plan you'll actually use.</p>
       <a href="https://wise.com/pay/r/vEDssyWJ9Q_S7To" class="cta-btn" id="finalCta" target="_blank" rel="noopener">grab my 1:1 pass →</a>
-      <p class="cta-note">secure payment via wise</p>
+      <p class="cta-note">secure payment via wise · your booking link lands in your inbox right after</p>
     </div>
   </section>
 
@@ -697,7 +756,7 @@
       <details class="terms-details">
         <summary>terms</summary>
         <div class="terms-panel">
-          your booking link is sent as soon as payment clears. reschedule up to 24 hours ahead with one free reschedule included. sessions are non-refundable once delivered.
+          your booking link is sent by email once your payment clears, usually within 24 hours, so you can pick the hour that works for you. reschedule up to 24 hours ahead with one free reschedule included. sessions are non-refundable once delivered.
         </div>
       </details>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info.growthpark@gmail.com" target="_blank" rel="noopener">contact</a>
@@ -725,12 +784,12 @@
     entries.forEach(e => {
       if (e.isIntersecting && !counted) {
         counted = true;
-        let start = 982;
+        let start = 2000;
         const end = 497;
         const step = () => {
-          start -= 17;
-          if (start <= end) { priceEl.textContent = end; return; }
-          priceEl.textContent = start;
+          start -= 55;
+          if (start <= end) { priceEl.textContent = end.toLocaleString(); return; }
+          priceEl.textContent = start.toLocaleString();
           requestAnimationFrame(step);
         };
         step();
@@ -779,8 +838,8 @@
 
   // playful speech bubble asides that pop up unexpectedly while scrolling
   const asides = [
-    { text: "psst, this stop alone is worth $147", after: '.ride-card:nth-child(1)' },
-    { text: "yep, that's a real $485 in savings", after: '.stack-wrap' }
+    { text: "psst, this stop alone is worth $300", after: '.ride-card:nth-child(1)' },
+    { text: "yep, that's a real $1,503 in savings", after: '.stack-wrap' }
   ];
   // create bubbles positioned near their anchors, revealed on scroll
   window.addEventListener('load', () => {
